@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Blogs</h1>
+<h1>リストブログ</h1>
 
 <table>
   <thead>
@@ -26,5 +26,11 @@
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'ニューブログ', new_blog_path %>
 <%= link_to '問い合わせ',{:controller => "show",:action => 'part1'},{:class => "btn"} %>
+<% if user_signed_in? %>
+<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+<li><%= link_to "名前変える", edit_user_registration_path %></li>
+<% else %>
+<li><%= link_to "Login", new_user_session_path %></li> 
+<% end %>

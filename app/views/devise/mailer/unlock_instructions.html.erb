@@ -1,0 +1,7 @@
+<p>Hello <%= @resource.email %>!</p>
+
+<p>アカウントが試みに失敗符号の過剰な数のためにロックされています.</p>
+
+<p>アカウントのロックを解除するには、以下のリンクをクリックしてください:</p>
+
+<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :blogs
   root "blogs#index"
   get "show/part1" => "show#part1"

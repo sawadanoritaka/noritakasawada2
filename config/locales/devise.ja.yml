@@ -6,7 +6,7 @@ ja:
      password: パスワード
      password_confirmation: パスワード確認
      email: メールアドレス
-     current_password: アドレスの再入力
+     current_password: パスワードの再入力
 
     not_found: "は見つかりませんでした"
 #      not_found: "not found"

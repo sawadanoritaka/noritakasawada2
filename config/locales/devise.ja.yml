@@ -9,14 +9,13 @@ ja:
      current_password: パスワードの再入力
      translation missing: すでにログインしています。
 
-    not_found: "は見つかりませんでした"
-#      not_found: "not found"
     already_confirmed: "は既に登録済みです"
 #      already_confirmed: "was already confirmed"
     not_locked: "は凍結されていません"
 #      not_locked: "was not locked"
   devise:
     failure:
+      not_found_in_database: '登録に見当たりません。'
       unauthenticated: 'ログインしてください。'
 #      unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: '本登録を行ってください。'
@@ -79,7 +78,7 @@ ja:
       already_confirmed: "は既に登録済みです。ログインしてください"
       confirmation_period_expired: "%{period}以内に確認する必要がありますので、新しくリクエストしてください。"
       expired: "有効期限切れです。新規登録してください。"
-      not_found_in_database: "登録にございません"
+      not_found: "登録ございません"
       not_locked: "ロックされていません。"
       not_saved:
         one: "エラーにより、この %{resource} を保存できません："

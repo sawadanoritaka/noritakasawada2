@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 <h1>ログイン後のページ</h1>
 
@@ -32,5 +32,5 @@
 <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 <li><%= link_to "名前変える", edit_user_registration_path %></li>
 <% else %>
-<li><%= link_to "Login", new_user_session_path %></li> 
+<li><%= link_to "Login", new_user_session_path %></li>
 <% end %>

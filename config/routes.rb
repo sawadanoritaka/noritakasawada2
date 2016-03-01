@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :blogs
-  root "blogs#index"
+  root "top#fv"
   get "show/part1" => "show#part1"
   post "show/part1" => "show#part1"
   post "show/part2" => "show#part2"

@@ -1,10 +1,13 @@
 ja:
   activerecord:
+
+
    attributes:
     user:
      name: 名前
      password: パスワード
      password_confirmation: パスワード確認
+     Blog was successfully created: "ブログできました！。"
      email: メールアドレス
      current_password: パスワードの再入力
      translation missing: すでにログインしています。
@@ -83,3 +86,4 @@ ja:
       not_saved:
         one: "エラーにより、この %{resource} を保存できません："
         other: "%{count} 個のエラーにより、この %{resource} を保存できません："
+

@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user! 
+  before_action :authenticate_user!
 
   # GET /blogs
   # GET /blogs.json
@@ -71,4 +71,5 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :content)
     end
+
 end

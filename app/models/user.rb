@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
-  
+has_many :blogs, dependent: :destroy
+
 #【サインアップ時Email重複防止】facebook認証時
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
 
@@ -32,4 +34,10 @@ end
     def self.create_unique_email
      User.create_unique_string + "@example.com"
     end
+
+ private
+  def user_params
+    params.require(:user).permit(:name, :description, :image)
+  end
+
 end

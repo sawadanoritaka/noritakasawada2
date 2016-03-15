@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'New Blog', new_blog_path %>
-
 <% @blogs.each do |blog| %>
 <div class="panel panel-primary">
  <div class="panel-heading">
@@ -11,6 +10,10 @@
   <%= blog.content %><br/>
   <em><%= blog.created_at %></em>
 <p><em><%= blog.user.name %></em></p>
+<% if blog.user == current_user %>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+<% end %>
+ <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  </div>
 </div>
 <% end %>

@@ -45,13 +45,13 @@ group :development do
   gem 'spring'
 end
 gem 'devise'
-gem 'therubyracer', platforms: :ruby 
-gem 'bootstrap-sass', '~> 3.2.0' 
+gem 'therubyracer', platforms: :ruby
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
-gem 'omniauth' 
-gem 'omniauth-twitter' 
+gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'bootstrap-social-rails'
 gem 'carrierwave'
-gem 'RMagick'
+gem 'rmagick', :require => 'RMagick'

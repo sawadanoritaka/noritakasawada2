@@ -24,13 +24,9 @@
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
-<a href="/user/auth/twitter" class ="btn btn-lg btn-social btn-twitter">
-  <i class ="fa fa-twitter"></i>Twitter登録する
-</a>
+<%= link_to "twitter認証", user_omniauth_authorize_path(:twitter), class: 'btn btn-lg btn-social btn-twitter fa fa-twitter' %>
 
-<a href="/user/auth/facebook" class ="btn btn-lg btn-social btn-facebook">
-  <i class ="fa fa-facebook"></i>Facebookで登録する
-</a>
+<%= link_to "facebook認証", user_omniauth_authorize_path(:facebook), class: 'btn btn-lg btn-social btn-facebook fa fa-facebook' %>
 <% end %>
 
 <%= render "devise/shared/links" %>

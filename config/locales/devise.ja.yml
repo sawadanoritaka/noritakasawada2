@@ -38,6 +38,9 @@ ja:
 #      signed_in: 'Signed in successfully.'
       signed_out: 'ログアウトしました。'
 #      signed_out: 'Signed out successfully.'
+    omniauth_callbacks:
+      failure: "%{kind} から承認されませんでした。理由：%{reason}"
+      success: "%{kind} から承認されました。"
     passwords:
       send_instructions: 'パスワードのリセット方法を数分以内にメールでご連絡します。'
 #      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
@@ -54,7 +57,7 @@ ja:
       updated: 'アカウントを更新しました。'
 #      updated: 'You updated your account successfully.'
       signed_up_but_unconfirmed: 'メール見てね'
-     
+
       destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
 #      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
     unlocks:

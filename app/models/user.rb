@@ -34,7 +34,9 @@ end
     def self.create_unique_email
      User.create_unique_string + "@example.com"
     end
-
+  def password_required?
+    super && provider.blank?
+  end
  private
   def user_params
     params.require(:user).permit(:name, :description, :image)

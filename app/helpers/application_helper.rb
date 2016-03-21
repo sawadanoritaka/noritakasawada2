@@ -7,7 +7,7 @@ def profile_img(user)
   elsif user.provider == 'twitter'
     img_url = "http://www.paper-glasses.com/api/twipi/#{user.name}/bigger"
   else
-    
+
   end
   image_tag(img_url, alt: user.name)
 end

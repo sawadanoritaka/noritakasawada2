@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :correct_user,   only: [:destroy, :edit]
 
   # GET /blogs
   # GET /blogs.json
@@ -20,6 +21,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+
   end
 
   # POST /blogs
@@ -42,7 +44,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to @blog, notice: 'アップされました.' }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: '消去しました.' }
       format.json { head :no_content }
     end
   end
@@ -71,5 +73,8 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :content)
     end
-
+     def correct_user
+      @blog = current_user.blogs.find_by(id: params[:id])
+      redirect_to root_url if @blog.nil?
+    end
 end

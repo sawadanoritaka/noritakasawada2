@@ -20,5 +20,5 @@ omniauth_callbacks: "users/omniauth_callbacks"
   post "show/part1" => "show#part1"
   post "show/part2" => "show#part2"
   post "show/part3" => "show#part3"
-  match "*path" => "application#handle_404", via: :all
+ 
 end

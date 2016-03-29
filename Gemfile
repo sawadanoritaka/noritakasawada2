@@ -57,3 +57,6 @@ gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 gem 'rspec-rails'
 gem 'capybara'
+gem 'rambulance'
+
+

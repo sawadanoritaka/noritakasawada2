@@ -40,4 +40,18 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { host: 'mighty-tank-158568.nitrousapp.com:3000' }
   BetterErrors::Middleware.allow_ip! '54.251.49.8'
+
+config.action_mailer.default_url_option = { host: 'localhost:3000'}
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.deliverry_method = :smtp
+config.action_mailer.smtp_settings = {
+ :enable_starttls_auto => true,
+ :address => "smtp.gmail.com",
+ :port => 587,
+ :domain => 'smtp.gmail.com',
+ :user_name => "snp.inc.info@gmail.com",
+ :password => "sawadanoritaka"
+ :authentication => 'login',
+
+}
 end

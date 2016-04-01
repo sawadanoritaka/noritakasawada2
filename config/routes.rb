@@ -12,7 +12,7 @@ passwords: "users/passwords",
 omniauth_callbacks: "users/omniauth_callbacks"
 }
 
-  resources :users,only: [:index,:show]
+  resources :users,only: [:show,:edit,:update,:index]
   resources :blogs
   root "top#fv"
   get "show/part1" => "show#part1"
@@ -20,5 +20,5 @@ omniauth_callbacks: "users/omniauth_callbacks"
   post "show/part1" => "show#part1"
   post "show/part2" => "show#part2"
   post "show/part3" => "show#part3"
-
+match "*path" => "application#handle_404", via: :all
 end

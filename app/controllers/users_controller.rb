@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @users = User.all
   end
   def show
-    @user = User.find(params[id])
+    @user = User.find(id_params[id])
   end
   def edit
   end
@@ -11,8 +11,7 @@ class UsersController < ApplicationController
   def update
   cirrent_user.update(update_params)
   end
-
-
+  
 private
   def id_patrams
     params.permit(:id)

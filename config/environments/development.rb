@@ -49,8 +49,8 @@ config.action_mailer.smtp_settings = {
  :address => "smtp.gmail.com",
  :port => 587,
  :domain => 'smtp.gmail.com',
- :user_name => "snp.inc.info@gmail.com",
- :password => "sawadanoritaka",
+ :user_name => 'snp.inc.info@gmail.com',
+ :password => 'sawadanoritaka',
  :authentication => 'login'
 }
 end

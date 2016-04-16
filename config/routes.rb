@@ -16,6 +16,7 @@ omniauth_callbacks: "users/omniauth_callbacks"
   resources :blogs
   root "top#fv"
   get "show/part1" => "show#part1"
+  get "email" => "email#box"
   get "about" => "about#company_overview"
   post "show/part1" => "show#part1"
   post "show/part2" => "show#part2"

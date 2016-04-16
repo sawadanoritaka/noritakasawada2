@@ -81,4 +81,5 @@ gem "guard-rspec", require: false
 gem "rack-mini-profiler"
 gem "spring-commands-rspec"
 gem "xray-rails"
+gem 'dotenv-rails'
 end

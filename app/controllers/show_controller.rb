@@ -6,8 +6,8 @@ Mail.defaults do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'smtp.gmail.com',
-    :user_name => 'snp.inc.info@gmail.com',
-    :password => 'sawadanoritaka',
+    :user_name => 'sawadadive@gmail.com',
+    :password => 'dive1984',
     :authentication => 'plain',
     :enable_starttls_auto => true
   }
@@ -47,8 +47,8 @@ end
 }
 end
     @m = Mail.new do
-      from "snp.inc.info@gmail.com"
-      to "snp.inc.info@gmail.com"
+      from "sawadadive@gmail.com"
+      to "sawadadive@gmail.com"
       subject "test mail subject"
       body "メール送信完了  \n  しばしお待ち下さい"
     end

@@ -82,4 +82,5 @@ gem "rack-mini-profiler"
 gem "spring-commands-rspec"
 gem "xray-rails"
 gem 'dotenv-rails'
+gem 'gmail'
 end

@@ -1,7 +1,7 @@
-<h1>受信内容</h1>
+<h1>お問い合わせ内容</h1>
 <% @mails.each do |mail|%>
-<p><%= mail.subject %></p>
+<p>件名:<%= mail.subject %></p>
 <%if mail.text_part %>
-<p><%= simple_format(mail.text_part.decoded.encode("UTF-8", mail.charset))%></p>
+<p>内容:<%= simple_format(mail.text_part.decoded.encode("UTF-8", mail.charset))%></p>
 <% end %>
 <% end %>

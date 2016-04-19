@@ -58,7 +58,7 @@ gem 'rmagick', :require => 'RMagick'
 gem 'rspec-rails'
 gem 'capybara'
 gem 'rambulance'
-
+gem 'gmail'
 group :test, :development do
 gem 'awesome_print'
 gem 'better_errors'
@@ -82,5 +82,5 @@ gem "rack-mini-profiler"
 gem "spring-commands-rspec"
 gem "xray-rails"
 gem 'dotenv-rails'
-gem 'gmail'
+
 end

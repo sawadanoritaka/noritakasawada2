@@ -6,11 +6,10 @@ PASSWORD='dive1984' #gmailのパスワード
    @gmail = Gmail.new(USERNAME,PASSWORD)
    @mails =  @gmail.inbox.emails(:all).map
 
-     mail_config
      @mails = Mail.find(count:10, order: :desc, what: :all)
-     @show = Show.all
+
   end
-  
+
   def mail_config
    Mail.defaults do
         retriever_method :pop3, {
@@ -21,6 +20,6 @@ PASSWORD='dive1984' #gmailのパスワード
           :enable_ssl => true
         }
       end
-    
+
   end
 end

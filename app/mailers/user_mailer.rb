@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(show)
     @show = show.message
-    mail to: "sawadadive@gmail.com", subject: "テスト"
+    mail to: "sawadadive@gmail.com", subject: "質問"
   end
 end

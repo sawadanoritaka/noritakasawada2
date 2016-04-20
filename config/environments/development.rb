@@ -46,8 +46,8 @@ config.action_mailer.raise_delivery_errors = true
 config.action_mailer.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
-:user_name => "app47462715@heroku.com",
-:password => "joqgvo9q3260",
+:user_name => ENV["app47462715@heroku.com"],
+:password => ENV["joqgvo9q3260"],
 :domain => "heroku.com",
 :address => "smtp.sendgrid.net",
 :port => 587,

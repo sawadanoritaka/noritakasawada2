@@ -29,7 +29,9 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = current_user.blogs.build(blog_params)
+    #@blog = current_user.blogs.build(blog_params)
+    not_strong_params = params.require(:blog).permit!
+    @blog = Blog.new(not_strong_params)
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }

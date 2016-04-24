@@ -9,6 +9,10 @@
   <strong>内容:</strong>
   <%= @blog.content %>
 </p>
+<div id ="comment_area">
+  <%= render partial:'comments/index',locals: { comments: @comments} %>
+</div>
+
 <%= render partial:'comments/form', locals: {comment: @comment} %>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |

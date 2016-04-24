@@ -13,7 +13,9 @@ omniauth_callbacks: "users/omniauth_callbacks"
 }
 
   resources :users,only: [:show,:edit,:update,:index]
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
   root "top#fv"
   get "show/part1" => "show#part1"
   get "email" => "email#box"

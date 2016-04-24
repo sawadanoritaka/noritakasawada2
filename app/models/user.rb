@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
-has_many :blogs, dependent: :destroy
+has_many :blogs
+has_many :comments
 
 #【サインアップ時Email重複防止】facebook認証時
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

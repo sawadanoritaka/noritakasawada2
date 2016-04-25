@@ -1,5 +1,5 @@
 <ul>
-<% @comments.each do |comment| %>
+<% comments.each do |comment| %>
   <% unless comment.id.nil? %>
 <li><%= comment.user.name %></li>
 <li><%= comment.content %></li>

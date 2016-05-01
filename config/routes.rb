@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   resources :comments
   get 'about/company_overview'
 
@@ -17,6 +18,12 @@ omniauth_callbacks: "users/omniauth_callbacks"
   resources :blogs do
     resources :comments
   end
+
+  resources :questions do
+    resources :questions_comments
+  end
+
+
   root "top#fv"
   get "show/part1" => "show#part1"
   get "email" => "email#box"
